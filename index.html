@@ -1,134 +1,494 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
-    <title>Fundação Doe Sangue</title>
+    <meta name="description" content="Fundação Doe Sangue - Salve vidas através da doação de sangue. Informações, cadastro e agendamento online.">
+    <meta name="keywords" content="doação de sangue, hemocentro, salvar vidas, doar sangue">
+    <meta name="author" content="Fundação Doe Sangue">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://doesangue.org/">
+    <meta property="og:title" content="Fundação Doe Sangue - Salve Vidas">
+    <meta property="og:description" content="Participe da nossa missão de salvar vidas através da doação de sangue. Cadastre-se e agende sua doação.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://doesangue.org/">
+    <meta property="twitter:title" content="Fundação Doe Sangue - Salve Vidas">
+    <meta property="twitter:description" content="Participe da nossa missão de salvar vidas através da doação de sangue.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            200: '#fecaca',
+                            300: '#fca5a5',
+                            400: '#f87171',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            700: '#b91c1c',
+                            800: '#991b1b',
+                            900: '#7f1d1d',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩸</text></svg>">
+    
+    <title>Fundção Doe Sangue - Salve Vidas</title>
 </head>
-<body>
-    <header>
-        <nav class="top-nav">
-            <ol>
-              <li><a href="./mapa_site.html">Ir para menu </a></li>
-                <li><a href="servico.html">Serviços</a></li>
-                <li><a href="./contato.html">Contato</a></li>
-                <li><a href="./cadastro.html">Cadastro</a></li>
-                <li><a href="./informacoes.html">Informações</a></li>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./mapa_site.html">Mapa do Site</a></li>
-                <li><a href="./protecao_dados.html">Proteção de Dados</a></li>
-            </ol>
-        </nav>
-    </header>
-      <main>
-        <h1>Fundação Doe Sangue , Salve Vidas !!!</h1>
-        <div class="telefone">
-          <label for="telefone">Telefone para Agendamentos:
-            <p> RJ-Rio de Janeiro-0800-3333</p>
-            <p> PB-João Pessoa 0800-3334</p>
-            <p> MG-Juiz de Fora-0800-3335</p>
-            <p> AL-Maceio 0800-3336</p>
-            <p> SP-São Paulo-0800-3337</p>
-
-          </label>
-          
-      </div>
-        <img src="./img/dedoadedo.png" alt="Dedo a Dedo" class="img1">
-        <img src="./img/./doesangeazul.jpeg" alt="Sangue Azul" class="img2">
-        <img src="./img/estoque.jpeg" alt="estoque" class="img6">
-        <section id="posts">
-          
-          <article class="post" id="post01">
-            <h3>Condições e restrições para doar:</h3>
-            <p class="post-data"><strong>Data:</strong> 16/02/2022</p>
-            <p class="post-texto">
-
-A Fundação Doe Sangue adota como critérios básicos para avaliar quem se encontra ou não apto a doar sangue aqueles estabelecidos pelo Ministério da Saúde e pela Agência Nacional de Vigilância Sanitária (Anvisa), órgãos responsáveis pela legislação nacional de hemoterapia. Além desses, a Fundação Doe Sangue observa outros critérios, fundamentados em literatura nacional e internacional, visando à proteção e segurança de doadores e receptores.
-
-Neste sentido, cabe esclarecer as dúvidas mais frequentes sobre o assunto. Algumas situações, pela sua natureza mais delicada, somente podem ser discutidas com o profissional responsável pela triagem do candidato à doação. O candidato é entrevistado por um profissional de saúde, que faz algumas perguntas de caráter pessoal e íntimo. As informações prestadas são mantidas em rigoroso sigilo. A Fundação Doe Sangue não discrimina ninguém, mas existem doenças que podem ser transmitidas pelo sangue e que, às vezes, não podem ser totalmente evitadas com a realização dos exames laboratoriais de triagem do sangue, já que existe um período no qual as infecções nem sempre são detectadas nos exames. 
-
-Para consultar os critérios, verifique sempre todos os fatores associados: exames e procedimentos realizados, diagnóstico e tratamento realizados. Prevalecerá sempre o maior tempo de inaptidão. Vale lembrar, também, que estas normas são submetidas à revisão periódica. Verifique-as sempre que desejar doar sangue.
-
-Mas você pode continuar ajudando a salvar vidas: incentive pessoas que você conheça a realizar uma doação de sangue. Sua atitude pode promover mudanças significativas na sociedade e na vida de quem precisa de sangue.
-            </p>
-          </article>
-          <article class="post" id="post02">
-            <h3>Orientação ao doador:</h3>
-            <p class="post-data"><strong>Data:</strong> 30/08/2023</p>
-            <p class="post-texto">
-              O hábito de doar sangue requer responsabilidade, compromisso e, principalmente, solidariedade 
-              qualidades que já nascem com a pessoa ou que podem ser cultivadas desde a infância e mesmo despertadas pelo exemplo alheio. Ou quando a necessidade bate à porta. O ato traz benefícios para todos: hospitais, pacientes, Hemominas e sociedade, além de dar mais segurança ao cidadão que, a qualquer momento, pode necessitar do procedimento transfusional. E quem não pode doar, também pode dar sua contribuição, conscientizando outras pessoas sobre a importância e necessidade desse grande gesto.
-            </p> 
-          </article>
-        </section>
-        <article class="post" id="post03">
-          <h3>Depoimentos:</h3>
-          <p class="post-data"><strong>Data:</strong> 22/05/2023</p>
-          <p class="post-texto">
-            “A primeira vez que doei foi quando recebi um e-mail da SalvoVidas.com enquanto caminhava pela UFSC, sempre tive a vontade de doar, mas tinha um certo receio, pois tinha medo de passar mal após a doação. Chegando no local para doar o pessoal que me atendeu e tomou conta de mim enquanto doava foi extremamente competente e me explicava tudo o que tinha dúvida e me fizeram me sentir em um ambiente muito tranquilo. Após a doação descobri que tinha um cafézinho, muito bom por sinal. Resumindo foi uma ótima experiência que repito sempre que posso. Já doei quatro vezes em menos de um ano, agora tenho que esperar completar o tempo de um ano para voltar a doar, meio que viciei nisso. O que me motiva a ir é em primeiro lugar a chance de ajudar alguém e em segundo o cafezinho é realmente muito bom.  A sensação que sinto após a doação é de calma, felicidade, excitação, tranquilidade e de dever cumprido. A SalvoVidas.com me ajudou com um pequeno empurrão que irei agradecer eternamente, pois me possibilitou começar algo que pretendo continuar fazendo e tentarei trazer amigos a começar a doar também.”
-            <p>Daniel Oliveira</p>
-            <img src="./img/rapaz-doando-sangue.jpg" alt="rapaz doando Sangue">
-            <img src="./img/doe.jpg" alt="doe" class="img3">
-          </p>
-        </article>
-        <article class="post" id="post03">
-          <h3>Depoimentos:</h3>
-          <p class="post-data"><strong>Data:</strong> 22/05/2023</p>
-          <p class="post-texto">
-            “A minha avó estava internada, me senti muito impotente porque não havia nada que pudéssemos fazer. Então pensei em quantas pessoas passavam por uma internação e precisavam de doação de sangue e resolvi doar, para ajudar essas pessoas e suas famílias, já que a transfusão de sangue é algo possível. Doei com meu namorado, que também nunca havia doado, e mais dois amigos que já eram doadores. Desde então resolvi ser uma doadora frequente. O que me motiva é a  possibilidade de ajudar as pessoas, não apenas quem precisa da transfusão, mas sua família também. Desde a internação da minha avó eu pude ver realmente como é ruim ter alguém que amamos em uma situação grave, muitas vezes sem podermos fazer nada. Ajudar as pessoas nos faz bem e não custa nada.”
-            <p>Jessica Marilia</p>
-            <img src="./img/mocadoando.jpg" alt="Moça doando Sangue">
-            <img src="./img/importância-da-Doação-De-Sangue-.jpg" alt="importancia" class="img4">
-          </p>
-        </article>
-        <div class="paragrafo1">
-          <p><strong>PEC do Plasma é descabida e seria atraso para o sistema brasileiro</strong></p>
-          <p> <p>29/08/2023</p>
-            Dra. Júnia Guimarães Cioffi
-
-            Este é um momento promissor e único para os hemoderivados e a hemoterapia brasileira: o Ministério da Saúde tem ratificado a disposição em fortalecer a hemorrede e a indústria de hemoderivados, agora classificada como área estratégica da Defesa Nacional, conforme atesta selo concedido pelo Ministério da Defesa. A notícia mais recente revela que o PAC (Programa de Aceleração do Crescimento) vem para contribuir com o fortalecimento do trabalho e o papel da Hemobrás (Empresa Brasileira de Hemoderivados e Biotecnologia), que está na reta final da construção do seu parque fabril; e, ainda, estamos às vésperas de conquistar a autossuficiência quando se trata da produção de hemoderivados para o atendimento dos usuários do SUS (Sistema Único de Saúde). Neste contexto, estão em questão a segurança e qualidade dos serviços de saúde do país e a soberania brasileira.
-            
-            É importante, neste momento, falarmos dos riscos trazidos pela PEC do Plasma (Proposta de Emenda Constitucional 10/2022), em tramitação no Congresso Nacional. Primeiramente, pode-se dizer que é uma PEC descabida: ela representa um grande atraso ao sistema de coleta do sangue brasileiro, ao aproveitamento do sangue ou de partes dele. Como se sabe, a PEC 10/2022 prevê a alteração do art. 199 do texto constitucional, que versa sobre a comercialização do plasma humano por entidades privadas e públicas, e estabelece novos critérios para a doação. Dessa forma, a coleta de sangue feita de forma solidária, passaria a ser remunerada. A PEC vai no sentido contrário à prática adotada pelos países desenvolvidos. Esses países trabalham na lógica da doação voluntária. A aprovação dessa proposta traria inúmeros prejuízos ao sistema de saúde brasileiro, sobretudo para aqueles que dependem do SUS.
-            
-            Para nós, especialistas, a grande preocupação quanto à PEC do Plasma é que, com a eventual alteração do texto constitucional, as novas regras multipliquem no Brasil exemplares de doadores profissionais. Seria uma realidade trágica, que eu não quero vislumbrar e repudio.
-            
-            Nos países onde há legalização da doação remunerada, nota-se um descuido com a saúde do cidadão, que muitas vezes cria artifícios para receber o dinheiro de que tanto precisa para subsistência. Quando a doação de sangue em determinado país é paga, verifica-se um claro prejuízo para as doações oriundas de atitudes altruístas e um consequente dano para o paciente. Defendo com veemência que a doação no Brasil se mantenha no modelo atual, de maneira voluntária.
-            
-            O mundo inteiro enfrenta a falta de alguns derivados, como a imunoglobulina. É uma realidade internacional, não apenas do Brasil – o que não dá direito a nenhum país de tomar decisões duvidáveis. Que garantias teremos de que as empresas interessadas na PEC 10/2022 não virão a levar esse plasma brasileiro para processar fora daqui e vender a preço de mercado para onde precisar? Nenhuma. Esse plasma não voltaria necessariamente para o Brasil. Nada é garantido, uma vez que se trata de uma empresa privada. A partir do momento em que essas empresas forem comprar o plasma, elas se tornarão “donas” da matéria-prima.
-            
-            A aprovação da PEC 10/2022 abriria grandes e ameaçadoras portas para o uso do plasma humano por parte dos países de primeiro mundo, principalmente Europa e Estados Unidos. São eles que vão ser beneficiados com a venda do plasma “verde e amarelo” para a empresa privada. O Brasil – país continental como é o nosso –, precisa de autossuficiência com relação à produção de hemoderivados.
-            
-            O ideal é que tenha uma empresa pública, como a Hemobrás, que ajude a fortalecer a hemorrede e faça programas de doação voluntária com plasma excedente, mas também programas específicos de doação do plasma. Hoje, a tecnologia permite uma variedade de planejamento para a captação de doador, seja de sangue, doador de sangue fenotipado, doador de plaquetas e doador de plasma. Considero essencial que a Hemobrás tenha condições de atuar de forma integral, colocando seu potencial a serviço da produção de hemoderivados.
-            
-            Não tenho dúvidas de que cabe ao Ministério da Saúde, com a parceria da Hemobrás, a gestão do plasma da rede pública e privada para que possa dar o direcionamento da política de derivados no país. O aproveitamento total do sangue e a transformação de seus derivados, assim como a gestão por parte de uma empresa 100% brasileira é, para mim, o melhor modelo. É este modelo que imagino como futuro do país. 
-            
-          <p><strong>*Júnia Guimarães Cioffi, presidente da Fundação Hemominas desde 2011, médica hematologista. Participou de grupos de trabalho do Ministério da Saúde, vinculados à Coordenação da Política Nacional de Sangue e Hemoderivados. É palestrante e autora de artigos científicos publicados em revistas locais e nacionais.</strong></p></p>
-          </div>
-        <section id="formulario">
-          <h2>Deixe seu depoimento :</h2>
-          <form action="">
-            <div>
-                <label for="nome">Nome:</label>
-                <input id="nome" name="nome" type="text">
-                <label for="data">Data:</label>
-                <input id="data" name="data" type="date">
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="text-3xl animate-pulse-slow">🩸</div>
+                    <h1 class="text-2xl font-bold text-primary-600">Doe Sangue</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary-600 font-semibold border-b-2 border-primary-600 pb-1">Início</a>
+                    <a href="servico.html" class="text-gray-700 hover:text-primary-600 transition-colors duration-200">Serviços</a>
+                    <a href="informacoes.html" class="text-gray-700 hover:text-primary-600 transition-colors duration-200">Informações</a>
+                    <a href="cadastro.html" class="text-gray-700 hover:text-primary-600 transition-colors duration-200">Cadastro</a>
+                    <a href="contato.html" class="text-gray-700 hover:text-primary-600 transition-colors duration-200">Contato</a>
+                    <a href="login.html" class="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200">Login</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <label for="mensagem">Mensagem:</label>
-            <textarea name="mensagem" id="mensagem" cols="20" rows="10"></textarea>
+        </div>
         
-            <input type="submit" value="Enviar">
-        </form>
-          </div>
-           
-        </section>
-      </main>
-      <footer>
-        <span>Fundação Doe Sangue</span>
-        <span> Imprensa </span>
-        <span><a href="http://www.hemominas.mg.gov.br/">Hemominas</a></span>
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary-600 font-semibold">Início</a>
+                <a href="servico.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Serviços</a>
+                <a href="informacoes.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Informações</a>
+                <a href="cadastro.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Cadastro</a>
+                <a href="contato.html" class="block px-3 py-2 text-gray-700 hover:text-primary-600">Contato</a>
+                <a href="login.html" class="block px-3 py-2 bg-primary-600 text-white rounded-lg mx-3 text-center">Login</a>
+            </div>
+        </div>
+        </nav>
 
-      </footer>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"grain\" width=\"100\" height=\"100\" patternUnits=\"userSpaceOnUse\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"white\" opacity=\"0.1\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23grain)\"/></svg>');"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="animate-fade-in">
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Salve Vidas com a 
+                        <span class="text-yellow-300">Doação de Sangue</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-gray-100 leading-relaxed">
+                        Cada doação pode salvar até 4 vidas. Faça parte dessa corrente do bem e ajude quem mais precisa.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="cadastro.html" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            🩸 Quero Doar Agora
+                        </a>
+                        <a href="informacoes.html" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary-600 transition-all duration-300">
+                            📋 Saiba Mais
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="animate-slide-up">
+                    <div class="relative">
+                        <img src="./img/dedoadedo.png" alt="Doação de sangue - Dedo a dedo salvando vidas" 
+                             class="w-full h-auto rounded-2xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <div class="absolute -top-4 -right-4 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full font-bold text-lg animate-bounce-slow">
+                            💝 Salve Vidas
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-primary-50 to-yellow-50 rounded-3xl p-8 shadow-xl">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">📞 Telefones para Agendamento</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-2xl font-bold text-primary-600 mb-2">RJ</div>
+                        <div class="text-gray-600 mb-1">Rio de Janeiro</div>
+                        <div class="text-xl font-bold text-primary-600">0800-3333</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-2xl font-bold text-primary-600 mb-2">PB</div>
+                        <div class="text-gray-600 mb-1">João Pessoa</div>
+                        <div class="text-xl font-bold text-primary-600">0800-3334</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-2xl font-bold text-primary-600 mb-2">MG</div>
+                        <div class="text-gray-600 mb-1">Juiz de Fora</div>
+                        <div class="text-xl font-bold text-primary-600">0800-3335</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-2xl font-bold text-primary-600 mb-2">AL</div>
+                        <div class="text-gray-600 mb-1">Maceió</div>
+                        <div class="text-xl font-bold text-primary-600">0800-3336</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-2xl font-bold text-primary-600 mb-2">SP</div>
+                        <div class="text-gray-600 mb-1">São Paulo</div>
+                        <div class="text-xl font-bold text-primary-600">0800-3337</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Images Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <img src="./img/doesangeazul.jpeg" alt="Sangue azul - Tipos sanguíneos" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Tipos Sanguíneos</h3>
+                        <p class="text-gray-200">Conheça os diferentes tipos sanguíneos</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                    <img src="./img/estoque.jpeg" alt="Estoque de sangue" 
+                         class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Estoque</h3>
+                        <p class="text-gray-200">Níveis de estoque em tempo real</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <article class="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 flex items-center">
+                            📋 Condições e Restrições
+                        </h3>
+                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">16/02/2022</span>
+                    </div>
+                    <div class="space-y-4 text-gray-600">
+                        <p>A Fundação Doe Sangue adota critérios estabelecidos pelo Ministério da Saúde e pela Anvisa para avaliar a aptidão para doação de sangue. Nossos critérios são fundamentados em literatura nacional e internacional, visando à proteção e segurança de doadores e receptores.</p>
+                        <p>O candidato é entrevistado por um profissional de saúde qualificado, que mantém rigoroso sigilo sobre as informações prestadas. Existem doenças que podem ser transmitidas pelo sangue e que, às vezes, não podem ser totalmente evitadas com os exames laboratoriais de triagem.</p>
+                        <a href="informacoes.html" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                            Ver critérios completos 
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 flex items-center">
+                            💡 Orientações ao Doador
+                        </h3>
+                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">30/08/2023</span>
+                    </div>
+                    <div class="space-y-4 text-gray-600">
+                        <p>O hábito de doar sangue requer responsabilidade, compromisso e, principalmente, solidariedade. Essas qualidades podem ser cultivadas desde a infância e despertadas pelo exemplo alheio ou quando a necessidade bate à porta.</p>
+                        <p>O ato traz benefícios para todos: hospitais, pacientes, hemocentros e sociedade, além de dar mais segurança ao cidadão que, a qualquer momento, pode necessitar do procedimento transfusional.</p>
+                        <a href="informacoes.html" class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors">
+                            Saiba mais sobre orientações 
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">💬 Depoimentos de Doadores</h2>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <article class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <div class="text-6xl text-primary-200 absolute -top-4 -left-4">"</div>
+                        <p class="text-lg text-gray-700 italic leading-relaxed relative z-10">
+                            "A primeira vez que doei foi quando recebi um e-mail da SalvoVidas.com. Sempre tive vontade de doar, mas tinha receio de passar mal. O pessoal que me atendeu foi extremamente competente e me fez sentir em um ambiente muito tranquilo. Já doei quatro vezes em menos de um ano. A sensação após a doação é de calma, felicidade e dever cumprido."
+                        </p>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <img src="./img/rapaz-doando-sangue.jpg" alt="Daniel Oliveira doando sangue" 
+                             class="w-16 h-16 rounded-full object-cover border-4 border-primary-200">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">Daniel Oliveira</h4>
+                            <span class="text-primary-600 font-medium">Doador Regular</span>
+                        </div>
+                    </div>
+          </article>
+
+                <article class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="relative">
+                        <div class="text-6xl text-primary-200 absolute -top-4 -left-4">"</div>
+                        <p class="text-lg text-gray-700 italic leading-relaxed relative z-10">
+                            "Minha avó estava internada e me senti impotente. Pensei em quantas pessoas precisam de doação de sangue e resolvi doar para ajudar essas pessoas e suas famílias. Desde então sou uma doadora frequente. O que me motiva é a possibilidade de ajudar as pessoas e suas famílias."
+                        </p>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <img src="./img/mocadoando.jpg" alt="Jessica Marilia doando sangue" 
+                             class="w-16 h-16 rounded-full object-cover border-4 border-primary-200">
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">Jessica Marilia</h4>
+                            <span class="text-primary-600 font-medium">Doadora Frequente</span>
+                        </div>
+                    </div>
+          </article>
+            </div>
+        </div>
+        </section>
+
+    <!-- News Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="bg-gradient-to-r from-primary-50 to-yellow-50 rounded-3xl p-8 shadow-xl">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-3xl font-bold text-gray-800 flex items-center">
+                        📰 PEC do Plasma é descabida e seria atraso para o sistema brasileiro
+                    </h2>
+                    <div class="flex items-center space-x-4">
+                        <span class="bg-primary-100 text-primary-800 px-3 py-1 rounded-full text-sm font-medium">29/08/2023</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">Dra. Júnia Guimarães Cioffi</span>
+                    </div>
+                </div>
+                <div class="space-y-4 text-gray-700">
+                    <p class="text-lg">Este é um momento promissor e único para os hemoderivados e a hemoterapia brasileira. O Ministério da Saúde tem ratificado a disposição em fortalecer a hemorrede e a indústria de hemoderivados, agora classificada como área estratégica da Defesa Nacional.</p>
+                    <p class="text-lg">A PEC do Plasma (Proposta de Emenda Constitucional 10/2022) representa um grande atraso ao sistema de coleta do sangue brasileiro. A aprovação dessa proposta traria inúmeros prejuízos ao sistema de saúde brasileiro, sobretudo para aqueles que dependem do SUS.</p>
+                    <p class="text-lg">Defendemos que a doação no Brasil se mantenha no modelo atual, de maneira voluntária, seguindo as melhores práticas internacionais.</p>
+                    <div class="mt-6 p-4 bg-white rounded-xl border-l-4 border-primary-500">
+                        <p class="text-sm text-gray-600">
+                            <strong>*Júnia Guimarães Cioffi</strong> - Presidente da Fundação Hemominas desde 2011, médica hematologista.
+                        </p>
+                    </div>
+                </div>
+        </article>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 shadow-xl">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">💬 Deixe seu Depoimento</h2>
+                <p class="text-center text-gray-600 mb-8">Compartilhe sua experiência como doador e inspire outras pessoas a fazerem o mesmo.</p>
+                
+                <form class="space-y-6" id="testimonial-form">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="nome" class="block text-sm font-semibold text-gray-700 mb-2">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                                   placeholder="Seu nome completo">
+                        </div>
+                        <div>
+                            <label for="data" class="block text-sm font-semibold text-gray-700 mb-2">Data da Doação</label>
+                            <input type="date" id="data" name="data" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="mensagem" class="block text-sm font-semibold text-gray-700 mb-2">Seu Depoimento</label>
+                        <textarea name="mensagem" id="mensagem" rows="6" required 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none"
+                                  placeholder="Conte-nos sobre sua experiência como doador..."></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-primary-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
+                        <span>Enviar Depoimento</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="text-3xl animate-pulse-slow">🩸</div>
+                        <h3 class="text-2xl font-bold">Fundação Doe Sangue</h3>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Salvando vidas através da doação de sangue. Junte-se a nós nessa missão de solidariedade.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="informacoes.html" class="text-gray-300 hover:text-white transition-colors">Informações</a></li>
+                        <li><a href="servico.html" class="text-gray-300 hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="cadastro.html" class="text-gray-300 hover:text-white transition-colors">Cadastro</a></li>
+                        <li><a href="contato.html" class="text-gray-300 hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>📞 0800-3333 (RJ)</li>
+                        <li>📞 0800-3334 (PB)</li>
+                        <li>📞 0800-3335 (MG)</li>
+                        <li>📞 0800-3336 (AL)</li>
+                        <li>📞 0800-3337 (SP)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Parceiros</h4>
+                    <ul class="space-y-2">
+                        <li><a href="http://www.hemominas.mg.gov.br/" target="_blank" rel="noopener" class="text-gray-300 hover:text-white transition-colors">Hemominas</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Ministério da Saúde</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2024 Fundação Doe Sangue. Todos os direitos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="protecao_dados.html" class="text-gray-400 hover:text-white transition-colors">Proteção de Dados</a>
+                    <a href="mapa_site.html" class="text-gray-400 hover:text-white transition-colors">Mapa do Site</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form validation and submission
+        document.getElementById('testimonial-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const nome = document.getElementById('nome').value.trim();
+            const data = document.getElementById('data').value;
+            const mensagem = document.getElementById('mensagem').value.trim();
+            
+            if (!nome || !data || !mensagem) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            if (mensagem.length < 10) {
+                alert('O depoimento deve ter pelo menos 10 caracteres.');
+                return;
+            }
+            
+            // Show success message
+            alert('Depoimento enviado com sucesso! Obrigado por compartilhar sua experiência.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('backdrop-blur-md', 'bg-white/95');
+            } else {
+                nav.classList.remove('backdrop-blur-md', 'bg-white/95');
+            }
+        });
+    </script>
 </body>
 </html>
