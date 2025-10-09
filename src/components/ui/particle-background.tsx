@@ -24,9 +24,9 @@ export function ParticleBackground() {
       opacity: number;
       color: string;
 
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+      constructor(canvasWidth: number, canvasHeight: number) {
+        this.x = Math.random() * canvasWidth;
+        this.y = Math.random() * canvasHeight;
         this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
         this.size = Math.random() * 2 + 1;
@@ -34,22 +34,22 @@ export function ParticleBackground() {
         this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`;
       }
 
-      update() {
+      update(canvasWidth: number, canvasHeight: number) {
         this.x += this.vx;
         this.y += this.vy;
 
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        if (this.x < 0 || this.x > canvasWidth) this.vx *= -1;
+        if (this.y < 0 || this.y > canvasHeight) this.vy *= -1;
       }
 
-      draw() {
-        ctx.save();
-        ctx.globalAlpha = this.opacity;
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
+      draw(context: CanvasRenderingContext2D) {
+        context.save();
+        context.globalAlpha = this.opacity;
+        context.fillStyle = this.color;
+        context.beginPath();
+        context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        context.fill();
+        context.restore();
       }
     }
 
@@ -61,7 +61,7 @@ export function ParticleBackground() {
     const initParticles = () => {
       particles.length = 0;
       for (let i = 0; i < 50; i++) {
-        particles.push(new Particle());
+        particles.push(new Particle(canvas.width, canvas.height));
       }
     };
 
@@ -69,8 +69,8 @@ export function ParticleBackground() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle) => {
-        particle.update();
-        particle.draw();
+        particle.update(canvas.width, canvas.height);
+        particle.draw(ctx);
       });
 
       // Draw connections

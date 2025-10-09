@@ -9,8 +9,8 @@ export function Analytics() {
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
       // Initialize GA4
       window.gtag = window.gtag || function() {
-        (window.gtag as any).q = (window.gtag as any).q || [];
-        (window.gtag as any).q.push(arguments);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(arguments);
       };
       
       // Track page views
