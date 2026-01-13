@@ -263,5 +263,14 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para de
 
 *Cada doação pode salvar até 4 vidas. Faça parte dessa corrente do bem!*
 
-## 👨‍💻 Desenvolvido por:
-IronDev Software. Contato: dibarbieri21@gmail.com | (32) 99118-6728
+---
+
+🛠️ **Software desenvolvido por Daniel Barbieri**  
+Engenheiro de Software | Full Stack Developer  
+
+Código construído com foco em eficiência, organização, escalabilidade e boas práticas de desenvolvimento.
+
+🌐 GitHub: https://github.com/DanielBarbieri21  
+💼 LinkedIn: https://www.linkedin.com/in/daniel-barbieri-4990462a/
+
+---
